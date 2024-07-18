@@ -2,7 +2,10 @@ import React from "react";
 
 const Createtodo = () => {
   const tasks = 0;
-  const hideButton = True;
+  const hideButton = false;
+  const styles = {
+    backgroundColor: "red",
+  };
   const countTasks = () => {
     // if (tasks === 0) {
     //   return "No tasks available";
@@ -13,8 +16,8 @@ const Createtodo = () => {
   };
   return (
     <>
-      <h1>{countTasks()} </h1>
-      <button disabled={hideButton} value="Add Task Button">
+      <h1 style={styles}>{countTasks()} </h1>
+      <button className="btn" disabled={hideButton} value="Add Task Button">
         Add Task
       </button>
     </>
