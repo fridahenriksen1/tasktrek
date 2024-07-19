@@ -11,7 +11,7 @@ const Createtodo = () => {
   return (
     <>
       <h1>Tasks: {tasks} </h1>
-      <button onClick={handleClick} value="Add Task Button"> 
+      <button onClick={handleClick} value="Add Task Button">
         Add Task
       </button>
     </>
