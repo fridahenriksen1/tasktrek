@@ -5,6 +5,10 @@
   border-bottom: 1px solid #dcdcdc;
 }
 
+.app_header > form {
+  width: 40%;
+}
+
 .task_input {
   font-size: 1.25rem;
   font-weight: 500;
@@ -15,4 +19,48 @@
   padding: 0.5rem 0.75rem;
   margin-bottom: 0.938rem;
   width: 100%;
+}
+
+.task_input::placeholder {
+  color: #ababab;
+}
+
+.task_form_bottom_line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tag {
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: #f9f9f9;
+  border: 1px solid #dfe3e6;
+  border-radius: 0.313rem;
+  padding: 0.125rem 1.188rem;
+  margin-right: 1.188rem;
+  cursor: pointer;
+}
+/* Dropdown status */
+.task_status {
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid #999;
+  border-radius: 0.313rem;
+  width: 7.5rem;
+  height: 2.5rem;
+  padding: 0 0.313rem;
+}
+
+.task_submit {
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #6457f9;
+  color: #fff;
+  border-radius: 0.313rem;
+  height: 2.5rem;
+  padding: 0.188rem 0.813rem;
+  margin-left: 0.625rem;
+  border: none;
+  cursor: pointer;
 }
