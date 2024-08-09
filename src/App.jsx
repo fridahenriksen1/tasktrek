@@ -8,10 +8,9 @@ const App = () => {
     <div className="app">
       <TaskForm />
       <main className="app_main">
-        <TaskColumn />
-        <section className="task_Column">Section 1</section>
-        <section className="task_Column">Section 2</section>
-        <section className="task_Column">Section 3</section>
+        <TaskColumn title="To do" />
+        <TaskColumn title="Doing" />
+        <TaskColumn title="Done" />
       </main>
     </div>
   );
