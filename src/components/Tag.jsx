@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Tag.css";
+import "./Tag";
 
 const Tag = () => {
   return <button className="tag">HTML</button>;
