@@ -1,0 +1,32 @@
+.task_card {
+  width: 100%;
+  min-height: 6.25rem;
+  border: 1px solid #dcdcdc;
+  border-radius: 0.625rem;
+  padding: 0.938rem;
+  margin: 0.938rem 0;
+}
+
+.task_text {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.938rem;
+}
+
+.task_delete {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.task_delete:hover {
+  background-color: #ebebeb;
+}
+
+.delete_icon {
+  width: 1.25rem;
+}
