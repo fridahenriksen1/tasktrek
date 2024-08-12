@@ -12,28 +12,21 @@ const TaskForm = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    // const name = e.target.name;
-    // const value = e.target.value;
+
     // Denna funktionen kollar igenom propities och sen namn och ersätter med value
     setTaskData((prev) => {
       return { ...prev, [name]: value };
     });
   };
-  console.log(taskData);
-  // const [task, setTask] = useState("");
-  // const [status, setStatus] = useState("to do");
 
-  // const handleTaskChange = (e) => {
-  //   setTask(e.target.value);
-  // };
-  // const handleStatusChange = (e) => {
-  //   setStatus(e.target.value);
-  // };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(taskData);
+  };
 
-  // console.log(task, status);
   return (
     <header className="app_header">
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="task"
