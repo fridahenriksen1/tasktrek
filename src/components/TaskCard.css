@@ -36,4 +36,10 @@
 
 .delete_icon {
   width: 1.25rem;
+  opacity: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.task_delete:hover .delete_icon {
+  opacity: 80%;
 }
