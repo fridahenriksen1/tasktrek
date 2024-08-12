@@ -5,25 +5,41 @@ import "./Tag.css";
 import Tag from "./Tag";
 
 const TaskForm = () => {
-  const [task, setTask] = useState("");
-  const [status, setStatus] = useState("to do");
+  const [taskData, setTaskData] = useState({
+    task: "",
+    status: "todo",
+  });
 
-  const handleTaskChange = (e) => {
-    setTask(e.target.value);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    // const name = e.target.name;
+    // const value = e.target.value;
+    // Denna funktionen kollar igenom propities och sen namn och ersätter med value
+    setTaskData((prev) => {
+      return { ...prev, [name]: value };
+    });
   };
-  const handleStatusChange = (e) => {
-    setStatus(e.target.value);
-  };
+  console.log(taskData);
+  // const [task, setTask] = useState("");
+  // const [status, setStatus] = useState("to do");
 
-  console.log(task, status);
+  // const handleTaskChange = (e) => {
+  //   setTask(e.target.value);
+  // };
+  // const handleStatusChange = (e) => {
+  //   setStatus(e.target.value);
+  // };
+
+  // console.log(task, status);
   return (
     <header className="app_header">
       <form>
         <input
           type="text"
+          name="task"
           className="task_input"
           placeholder="Enter your task"
-          onChange={handleTaskChange}
+          onChange={handleChange}
         />
 
         <div className="task_form_bottom_line">
@@ -35,7 +51,11 @@ const TaskForm = () => {
           </div>
 
           <div>
-            <select className="task_status" onChange={handleStatusChange}>
+            <select
+              name="status"
+              className="task_status"
+              onChange={handleChange}
+            >
               <option value="todo">To do</option>
               <option value="doing">Doing</option>
               <option value="done">Done</option>
