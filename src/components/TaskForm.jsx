@@ -12,7 +12,8 @@ const TaskForm = () => {
   });
 
   const selectTag = (tag) => {
-   if(taskData.tags.some(item => item === tag))
+    if (taskData.tags.some((item) => item === tag)) {
+    }
   };
 
   const handleChange = (e) => {
