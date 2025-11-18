@@ -1,7 +1,7 @@
 import React from "react";
 
 const DropArea = () => {
-  return <section>Drop Here</section>;
+  return <section className="drop_area">Drop Here</section>;
 };
 
 export default DropArea;
