@@ -11,6 +11,7 @@ const TaskForm = () => {
     tags: [],
   });
 
+  //Funktion som adderar eller ta bort tags, trycker man en tag väljer man den, trycker man på samma tag igen så tar man bort den
   const selectTag = (tag) => {
     if (taskData.tags.some((item) => item === tag)) {
       const filterTags = taskData.tags.filter((item) => item !== tag);
