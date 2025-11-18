@@ -11,7 +11,12 @@ const Tag = ({ tagName, selectTag, selected }) => {
     default: { backgroundColor: "#f9f9f9" },
   };
   return (
-    <button type="button" className="tag" onClick={() => selectTag(tagName)}>
+    <button
+      type="button"
+      className="tag"
+      style={selected ? tagStyle[tagName] : tagstyle.default}
+      onClick={() => selectTag(tagName)}
+    >
       {tagName}
     </button>
   );
