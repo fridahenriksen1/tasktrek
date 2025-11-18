@@ -11,6 +11,10 @@ const TaskForm = () => {
     tags: [],
   });
 
+  const checkTag = (tag) => {
+    return taskData.tags.some((item) => item === tag);
+  };
+
   //Funktion som adderar eller ta bort tags, trycker man en tag väljer man den, trycker man på samma tag igen så tar man bort den
   const selectTag = (tag) => {
     if (taskData.tags.some((item) => item === tag)) {
@@ -57,7 +61,11 @@ const TaskForm = () => {
 
         <div className="task_form_bottom_line">
           <div>
-            <Tag tagName="HTML" selectTag={selectTag} />
+            <Tag
+              tagName="HTML"
+              selectTag={selectTag}
+              selected={checkTag("HTML")}
+            />
             <Tag tagName="CSS" selectTag={selectTag} />
             <Tag tagName="JavaScript" selectTag={selectTag} />
             <Tag tagName="React" selectTag={selectTag} />
