@@ -4,7 +4,7 @@ import "./TaskForm.css";
 import "./Tag.css";
 import Tag from "./Tag";
 
-const TaskForm = () => {
+const TaskForm = ({ setTasks }) => {
   const [taskData, setTaskData] = useState({
     task: "",
     status: "todo",
@@ -46,6 +46,9 @@ const TaskForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(taskData);
+    setTasks((prev) => {
+      return [...prev, taskData];
+    });
   };
 
   return (
