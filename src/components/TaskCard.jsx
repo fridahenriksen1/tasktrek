@@ -6,7 +6,7 @@ import deleteIcon from "../assets/delete.png";
 
 const TaskCard = ({ title, tags, handleDelete, index }) => {
   return (
-    <article className="task_card">
+    <article className="task_card" draggable>
       <p className="task_text">{title}</p>
 
       <div className="task_card_bottom_line">
