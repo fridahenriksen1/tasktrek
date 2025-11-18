@@ -11,9 +11,12 @@ const TaskColumn = ({ title, icon, tasks, status }) => {
         <img className="task_column_icon" src={icon} alt="" />
         {title}
       </h2>
-      {/* Om det är true så spara så visa, annars visas inget */}
+
       {tasks.map(
-        (task, index) => task.status === status && <TaskCard key={index} />
+        (task, index) =>
+          task.status === status && (
+            <TaskCard key={index} title={task.task} tags={task.tags} />
+          )
       )}
     </section>
   );
