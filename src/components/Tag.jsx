@@ -3,7 +3,7 @@ import React from "react";
 import "./Tag.css";
 
 const Tag = ({ tagName, selectTag, selected }) => {
-  const tagstyle = {
+  const tagStyle = {
     HTML: { backgroundColor: "#fda821" },
     CSS: { backgroundColor: "#15d4C8" },
     JavaScript: { backgroundColor: "#ffd12c" },
@@ -14,7 +14,7 @@ const Tag = ({ tagName, selectTag, selected }) => {
     <button
       type="button"
       className="tag"
-      style={selected ? tagStyle[tagName] : tagstyle.default}
+      style={selected ? tagStyle[tagName] : tagStyle.default}
       onClick={() => selectTag(tagName)}
     >
       {tagName}
