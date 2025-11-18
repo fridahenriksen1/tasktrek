@@ -3,6 +3,7 @@ import React from "react";
 
 import "./TaskColumn.css";
 import TaskCard from "./TaskCard";
+import DropArea from "./DropArea";
 
 const TaskColumn = ({
   title,
@@ -19,17 +20,21 @@ const TaskColumn = ({
         {title}
       </h2>
 
+      <DropArea />
+
       {tasks.map(
         (task, index) =>
           task.status === status && (
-            <TaskCard
-              key={index}
-              title={task.task}
-              tags={task.tags}
-              handleDelete={handleDelete}
-              index={index}
-              setActiveCard={setActiveCard}
-            />
+            <React.Fragment key={index}>
+              <TaskCard
+                title={task.task}
+                tags={task.tags}
+                handleDelete={handleDelete}
+                index={index}
+                setActiveCard={setActiveCard}
+              />
+              <DropArea />
+            </React.Fragment>
           )
       )}
     </section>
