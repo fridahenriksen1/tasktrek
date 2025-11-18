@@ -13,8 +13,21 @@ const TaskForm = () => {
 
   const selectTag = (tag) => {
     if (taskData.tags.some((item) => item === tag)) {
+      const filterTags = taskData.tags.filter((item) => item !== tag);
+      setTaskData((prev) => {
+        return { ...prev, tags: filterTags };
+      });
+    } else {
+      setTaskData((prev) => {
+        return {
+          ...prev,
+          tags: [tag],
+        };
+      });
     }
   };
+
+  console.log(taskData.tags);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
