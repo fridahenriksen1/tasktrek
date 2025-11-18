@@ -32,7 +32,7 @@ const TaskForm = ({ setTasks }) => {
     }
   };
 
-  console.log(taskData.tags);
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
