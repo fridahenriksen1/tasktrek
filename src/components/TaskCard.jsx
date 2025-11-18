@@ -12,7 +12,7 @@ const TaskCard = ({ title, tags }) => {
       <div className="task_card_bottom_line">
         <div className="task_card_tags">
           {tags.map((tag, index) => (
-            <Tag key={index} tagName={tag} selected={true} />
+            <Tag key={index} tagName={tag} selected />
           ))}
         </div>
         <div className="task_delete">
