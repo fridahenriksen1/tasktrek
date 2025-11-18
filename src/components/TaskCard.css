@@ -5,6 +5,12 @@
   border-radius: 0.625rem;
   padding: 0.938rem;
   margin: 0.938rem 0;
+  cursor: grab;
+}
+
+.task_card:active {
+  opacity: 0.7;
+  border: 1px solid #111;
 }
 
 .task_text {
