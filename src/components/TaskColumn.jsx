@@ -12,6 +12,7 @@ const TaskColumn = ({
   status,
   handleDelete,
   setActiveCard,
+  onDrop,
 }) => {
   return (
     <section className="task_Column">
@@ -20,7 +21,7 @@ const TaskColumn = ({
         {title}
       </h2>
 
-      <DropArea />
+      <DropArea onDrop={() => onDrop(status, 0)} />
 
       {tasks.map(
         (task, index) =>
@@ -33,7 +34,7 @@ const TaskColumn = ({
                 index={index}
                 setActiveCard={setActiveCard}
               />
-              <DropArea />
+              <DropArea onDrop={() => onDrop(status, index + 1)} />
             </React.Fragment>
           )
       )}
